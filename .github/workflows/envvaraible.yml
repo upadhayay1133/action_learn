@@ -12,6 +12,7 @@ jobs:
       - name: test1
         run: |
           echo "${{ env.cloud }}"
+          echo "repository variable is ${{ env.repository_variable }}"
 
  
         
