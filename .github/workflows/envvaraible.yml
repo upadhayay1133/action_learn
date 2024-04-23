@@ -1,16 +1,19 @@
 name: action_to_validate_the_env_variable
-on: workflow_dispatch
+
+on: 
+  workflow_dispatch
+
 jobs:
   env_test:
+    runs-on: ubuntu-latest
     env:
       cloud: azure
-      authentication: spn
-      cloud_env: aws
     steps:
-      - name: print the env name
-        if: ${{ env.authentication == 'spn'}}
+      - name: test1
         run: |
-            echo "The cloud is ${{ env.cloud }}"
+          echo "${{ env.cloud }}"
+
+ 
         
 
 
