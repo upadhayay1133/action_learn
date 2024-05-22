@@ -28,8 +28,9 @@ jobs:
       runs-on: ubuntu-latest
       steps: 
         - run: echo "First workflow triggered"
-        
+
     printInputs: 
+      runs-on: ubuntu-latest
       steps:
         - run: |
             echo "Env: ${{ github.event.input.environment }}"
