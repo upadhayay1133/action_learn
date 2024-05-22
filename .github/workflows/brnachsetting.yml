@@ -17,12 +17,20 @@ on:
   # push:
     branches:
       - 'main'
-      
+
 name: branch-setup
-  
+env:
+  STORAGE_UI_AUTH: ${{ secrets.STORAGE_UI_AUTH }}  
+  MY_PAT: ${{ secrets.MY_PAT }}
+
 jobs: 
     setup:
       runs-on: ubuntu-latest
       steps: 
         - run: echo "First workflow triggered"
+        
+    printInputs: 
+      steps:
+        - run: |
+            echo "Env: ${{ github.event.input.environment }}"
   
