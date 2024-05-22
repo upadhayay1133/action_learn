@@ -1,0 +1,13 @@
+on: 
+    workflow_run: 
+        workflows: ["branch-setup"]
+        types: 
+            - completed
+
+name: second-workflow
+
+jobs: 
+    setup:
+      runs-on: ubuntu-latest
+      steps: 
+        - run: echo "Second workflow triggered"
