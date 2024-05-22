@@ -1,0 +1,19 @@
+on: 
+    workflow_dispatch:
+       inputs:
+           environment: 'have you stored the pat token'
+           default: 'stored'
+           required: true
+        branches: 
+          - 'main'          
+name: branch-setup
+
+jobs: 
+    steps: 
+        - run: |
+            echo "First workflow triggered"
+
+
+
+
+
