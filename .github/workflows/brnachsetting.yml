@@ -1,14 +1,23 @@
-on: 
-    workflow_dispatch:
-      inputs:
-        environment:
-          description: 'Have you stored the PAT token?'
-          default: 'stored'
-          required: true
-          
-      branches:
-            - 'main'
-  
+# on: 
+#     workflow_dispatch:
+#       inputs:
+#         environment:
+#           description: 'Have you stored the PAT token?'
+#           default: 'stored'
+#           required: true
+#       branches:
+#         - 'main'
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Have you stored your MY_PAT Token?'
+        required: true
+        default: 'Stored'
+  # push:
+    branches:
+      - 'main'
+      
 name: branch-setup
   
 jobs: 
